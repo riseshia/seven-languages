@@ -20,10 +20,17 @@ Matrix set := method(
   x, y, val,
   call target at(y) atPut(x, val)
 )
+Matrix transpose := method(
+  matrix := call target clone
+  matrix get := method(x, y, proto get(y, x))
+  matrix set := method(x, y, val, proto set(y, x, value))
+  matrix
+)
 
 l := Matrix dim(3, 3)
 l println
 
-l get(0, 0) println
-l set(0, 0, 11)
-l get(0, 0) println
+l get(0, 2) println
+l set(0, 2, 11)
+l get(0, 2) println
+l transpose get(2, 0) == l get(2, 0) println
