@@ -1,8 +1,8 @@
-TwoDimList := List clone
+Matrix := List clone
 
-TwoDimList dim := method(
+Matrix dim := method(
   x, y,
-  new_list := TwoDimList clone
+  new_list := Matrix clone
   for(i, 1, y,
     row := list()
     row setSize(x)
@@ -11,17 +11,17 @@ TwoDimList dim := method(
   new_list
 )
 
-TwoDimList get := method(
+Matrix get := method(
   x, y,
   call target at(y) at(x)
 )
 
-TwoDimList set := method(
+Matrix set := method(
   x, y, val,
   call target at(y) atPut(x, val)
 )
 
-l := TwoDimList dim(3, 3)
+l := Matrix dim(3, 3)
 l println
 
 l get(0, 0) println
