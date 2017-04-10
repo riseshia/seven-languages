@@ -1,20 +1,32 @@
 vizzini := Object clone
 vizzini talk := method(
-  "Fezzik, are there rocks ahead?" println
+  "111" println
   yield
-  "Nore more rhymes now, I mean it." println
   yield
+  "111111" println
 )
 
 fezzik := Object clone
 fezzik rhyme := method(
   yield
-  "If there are, we'll all be dead." println
+  "222" println
   yield
-  "Anybody want a peanut?" println
+  yield
+  "222222" println
+)
+
+third := Object clone
+third rhyme := method(
+  yield
+  yield
+  "333" println
+  yield
+  yield
+  "333333" println
 )
 
 vizzini @@talk
 fezzik @@rhyme
+third @@rhyme
 
 Coroutine currentCoroutine pause
