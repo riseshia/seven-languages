@@ -11,4 +11,4 @@ primes = genPrimes 2 []
 yprimes :: [Integer]
 yprimes = sieve [2..]
   where
-    sieve (p:xs) = p : sieve [x|x <- xs, x `mod` p > 0]
+    sieve (p:xs) = p : sieve [x | x <- xs, x `mod` p > 0]
